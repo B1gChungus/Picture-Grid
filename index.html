@@ -12,7 +12,6 @@
             grid-template:
                 "one one one one two"auto "one one one one three"auto "one one one one four"auto "five five six seven eight"auto "nine ten ten eleven twelve"auto "nine fourteen fifteen fifteen sixteen"auto "thirteen fourteen seventeen eighteen nineteen"auto "twenty twentyone twentyone contact contact"auto / auto auto auto auto auto;
             ;
-            /* border: 1vh solid gray; */
         }
 
         div {
@@ -136,23 +135,10 @@
         li a:hover {
             background-color: rgb(255, 145, 246);
         }
-
-        p {
-            display: flex;
-            border: 5px solid blue;
-            width: 25%;
-            height: 1vh;
-            float: right;
-            color: rgb(255, 128, 128);
-            text-align: right;
-            padding: 5vh 0vw;
-            justify-items: end;
-            vertical-align: bottom;
-        }
     </style>
 </head>
 
-<body>
+<body style="border: 2vh solid gray;">
     <ul class="left">
         <li><a>Enter Site</a></li>
         <li><a>My Account</a></li>
@@ -181,12 +167,10 @@
         <div class="nineteen grid-area"><img src="19.png" width="100%" height="100%" /></div>
         <div class="twenty grid-area"><img src="20.png" width="100%" height="100%" /></div>
         <div class="twentyone grid-area"><img src="21.png" width="100%" height="100%" /></div>
-        <div class="contact grid-area">
-            <p>
-                Costume Expressions
+        <div class="contact grid-area" style="position: relative;">
+            <p style="position: absolute;bottom: 0;right: 0;color:coral; width:25%;">Costume Expressions
                 3411 Torrence Dr.
-                Rockville, MD 20850
-            </p>
+                Rockville, MD 20850</p>
         </div>
     </div>
 </body>
