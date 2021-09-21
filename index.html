@@ -14,14 +14,6 @@
             ;
         }
 
-        div {
-            /* border: 5px solid red; */
-            color: black;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            font-size: 1vw;
-            gap: .3vw;
-        }
-
         .one {
             grid-area: one;
         }
@@ -110,6 +102,18 @@
             grid-area: contact;
         }
 
+        .contactsmobile {
+            display: none;
+        }
+
+        div {
+            /* border: 5px solid red; */
+            color: black;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 1vw;
+            gap: .3vw;
+        }
+
         ul {
             list-style-type: none;
             margin: 0;
@@ -118,28 +122,63 @@
             background-color: pink;
         }
 
-        li {
-            float: left;
-        }
-
         li a {
             display: block;
             color: rgb(70, 70, 70);
-            text-align: center;
-            padding: .7vh 1.3vw;
-            font-size: 1vw;
+            padding: .7vh .5vw;
+            font-size: auto;
             text-decoration: none;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        ul li {
+            display: inline-block;
         }
 
         li a:hover {
             background-color: rgb(255, 145, 246);
         }
+
+        body {
+            border: 2vh solid gray;
+        }
+
+        @media (max-width: 400px) {
+            .container {
+                display: grid;
+                grid-template:
+                    "one one one one one"auto "one one one one one"auto "two twenty twentyone twentyone four"auto "three twenty twentyone twentyone four"auto "five five six seven eight"auto "nine ten ten eleven twelve"auto "nine fourteen fifteen fifteen sixteen"auto "thirteen fourteen seventeen eighteen nineteen"auto / auto auto auto auto auto;
+                ;
+            }
+
+            .contact {
+                display: none;
+            }
+
+            .ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: rgb(207, 152, 49);
+            }
+
+            .contactsmobile {
+                display: block;
+                background-color: rgb(207, 152, 49);
+                height: 15%;
+                font-size: 3vw;
+            }
+
+            body {
+                border: none;
+            }
+        }
     </style>
 </head>
 
-<body style="border: 2vh solid gray;">
-    <ul class="left">
+<body>
+    <ul class="left" style="text-align:center;">
         <li><a>Enter Site</a></li>
         <li><a>My Account</a></li>
         <li><a>Track Orders</a></li>
@@ -172,6 +211,11 @@
                 3411 Torrence Dr.
                 Rockville, MD 20850</p>
         </div>
+    </div>
+    <div class="contactsmobile">
+        Costume Expressions
+        3411 Torrence Dr.
+        Rockville, MD 20850
     </div>
 </body>
 
